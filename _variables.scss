@@ -1,0 +1,22 @@
+@mixin d-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin d-between{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin size($height,$width) {
+  height: $height;
+  width: $width;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

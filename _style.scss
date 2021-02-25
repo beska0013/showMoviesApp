@@ -1,0 +1,12 @@
+@use "./variables" as *;
+
+.head{
+  @include d-center;
+  padding: 1rem;
+}
+.content{
+  @include d-center;
+  img{
+    @include size(2rem,2rem)
+  }
+}
