@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+@keyframes anime {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
 body {
   height: 100vh;
   width: 100%;
@@ -51,17 +59,24 @@ body {
   margin: 1rem 0;
 }
 .footer .content {
-  height: 50rem;
-  width: 100rem;
-  display: flex;
+  height: 70vh;
+  width: 80vw;
   overflow: scroll;
   overflow-y: hidden;
+  display: flex;
+}
+.footer .content::-webkit-scrollbar {
+  height: 5px;
+  background: linear-gradient(to right, #008aff, #00ffe7);
+}
+.footer .content::-webkit-scrollbar-thumb {
+  background: black;
 }
 .footer .content .card {
   margin: 0 0.5rem;
   cursor: pointer;
 }
-.footer .content .card img {
+.footer .content .card .moviesImg {
   height: 100%;
   width: 30rem;
 }

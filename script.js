@@ -42,14 +42,16 @@ function showMovies(url) {
     let html = ''
     url.forEach(movies => {
         html += `  <div class="card">
-              <img  src=${moviesImg}${movies.poster_path}>
+              <img class="moviesImg" src=${moviesImg}${movies.poster_path}>
               <img class="postrerImage" src= ${moviesImg}${movies.backdrop_path}>
               <h2 >${movies.title}</h2>
               <p>${movies.overview}</p>
               <p>${movies.video}</p>
                 </div>`
     })
+
     content.innerHTML = html
+
     showSingleMovies()
 }
 
@@ -58,6 +60,7 @@ function showSingleMovies() {
     let previewMovie = ''
     for (let item of movieCard) {
         item.addEventListener('click', () => {
+            let moviesImg=document.querySelectorAll('.moviesImg')
             previewMovie = `<img class="poster" src='${item.childNodes[1].currentSrc}'>
                           <div class="text">
                             <h2 class="title">${item.childNodes[5].innerHTML}</h2>
@@ -66,6 +69,11 @@ function showSingleMovies() {
                           </div>`
             body.style.backgroundImage=`url(${item.childNodes[3].currentSrc})`
             mainContent.innerHTML = previewMovie
+            content.style.height='22vh'
+            moviesImg.forEach(img  =>{
+                img.style.width='10rem'
+            })
+
         })
     }
 }
@@ -86,5 +94,3 @@ form.addEventListener('input', (e) => {
         }
     }
 })
-
-

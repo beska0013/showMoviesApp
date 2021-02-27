@@ -38,19 +38,27 @@ body{
   @include d-center;
   margin: 1rem 0;
 .content{
-  @include size(50rem,100rem);
-  display: flex;
+  @include size(70vh,80vw);
   overflow: scroll;
   overflow-y: hidden;
+  &::-webkit-scrollbar{
+    height: 5px;
+   background: linear-gradient(to right,#008aff,#00ffe7);
+  }
+  &::-webkit-scrollbar-thumb{
+    background: black;
+  }
+  display: flex;
   .card {
-
     margin:0 .5rem;
     cursor: pointer;
-    img{
+    .moviesImg{
       @include size(100%,30rem);
     }
     .postrerImage, h2,p{
       display: none;
     }
-  }
-}}
+  }}}
+//.content::-webkit-scrollbar-track{
+//  background: red;
+//}

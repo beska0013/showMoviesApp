@@ -20,3 +20,11 @@
   margin:0;
   box-sizing: border-box;
 }
+@keyframes anime {
+0%,100%{
+  filter: hue-rotate(0deg);
+}
+  50%{
+    filter: hue-rotate(360deg);
+  }
+}
