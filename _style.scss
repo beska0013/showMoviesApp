@@ -3,6 +3,7 @@
 
 body{
   @include size(100vh,100%);
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: brightness(30%);
@@ -37,7 +38,7 @@ body{
   @include d-center;
   margin: 1rem 0;
 .content{
-  @include size(10rem,50rem);
+  @include size(50rem,100rem);
   display: flex;
   overflow: scroll;
   overflow-y: hidden;
@@ -46,9 +47,9 @@ body{
     margin:0 .5rem;
     cursor: pointer;
     img{
-      @include size(100%,5.5rem);
+      @include size(100%,30rem);
     }
-    h2,p{
+    .postrerImage, h2,p{
       display: none;
     }
   }
