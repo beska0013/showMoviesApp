@@ -1,12 +1,55 @@
 @use "./variables" as *;
 
+
+body{
+  @include size(100vh,100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: brightness(30%);
+  padding: 1rem 1rem;
+  transition: background .3s ease-in-out;
+
+}
 .head{
   @include d-center;
   padding: 1rem;
 }
-.content{
-  @include d-center;
-  img{
-    @include size(2rem,2rem)
+.main{
+  margin: 1rem 0;
+  display: flex;
+  .poster{
+    @include size(40rem,30rem);
+  }
+  .text{
+    font-family: "Poppins ExtraBold",sans-serif;
+    color: #f1f1f1;
+    margin: 0 1rem;
+    h2{
+     max-font-size: 48px;
+      min-font-size: 32px;
+    } }
+  video{
+    @include size(25rem,44rem)
   }
 }
+
+.footer{
+  @include d-center;
+  margin: 1rem 0;
+.content{
+  @include size(10rem,50rem);
+  display: flex;
+  overflow: scroll;
+  overflow-y: hidden;
+  .card {
+
+    margin:0 .5rem;
+    cursor: pointer;
+    img{
+      @include size(100%,5.5rem);
+    }
+    h2,p{
+      display: none;
+    }
+  }
+}}
