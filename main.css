@@ -21,6 +21,7 @@ body {
   backdrop-filter: brightness(30%);
   padding: 1rem 1rem;
   transition: background 0.3s ease-in-out;
+  font-family: "Poppins ExtraBold", sans-serif;
 }
 
 .head {
@@ -28,6 +29,16 @@ body {
   align-items: center;
   justify-content: center;
   padding: 1rem;
+}
+.head .nav {
+  display: flex;
+  gap: 2rem;
+}
+.head .nav .sourceBtn {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #f1f1f1;
+  -webkit-text-stroke: 1px #191616;
 }
 
 .main {
@@ -72,16 +83,11 @@ body {
 .footer .content::-webkit-scrollbar-thumb {
   background: black;
 }
-.footer .content .card {
+.footer .content img {
   margin: 0 0.5rem;
   cursor: pointer;
-}
-.footer .content .card .moviesImg {
   height: 100%;
   width: 30rem;
-}
-.footer .content .card .postrerImage, .footer .content .card h2, .footer .content .card p {
-  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

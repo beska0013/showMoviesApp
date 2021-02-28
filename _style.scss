@@ -9,12 +9,25 @@ body{
   backdrop-filter: brightness(30%);
   padding: 1rem 1rem;
   transition: background .3s ease-in-out;
+  font-family: "Poppins ExtraBold",sans-serif;
 
 }
 .head{
   @include d-center;
   padding: 1rem;
+  .nav{
+    display: flex;
+    gap: 2rem;
+
+    .sourceBtn{
+      font-size: 1.5em;
+      text-decoration: none;
+      color: #f1f1f1;
+      -webkit-text-stroke: 1px #191616;
+    }
+  }
 }
+
 .main{
   margin: 1rem 0;
   display: flex;
@@ -49,16 +62,10 @@ body{
     background: black;
   }
   display: flex;
-  .card {
+  img{
     margin:0 .5rem;
     cursor: pointer;
-    .moviesImg{
+
       @include size(100%,30rem);
-    }
-    .postrerImage, h2,p{
-      display: none;
-    }
+
   }}}
-//.content::-webkit-scrollbar-track{
-//  background: red;
-//}
