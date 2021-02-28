@@ -15,23 +15,12 @@ body{
 .head{
   @include d-center;
   padding: 1rem;
-  .nav{
-    display: flex;
-    gap: 2rem;
-
-    .sourceBtn{
-      font-size: 1.5em;
-      text-decoration: none;
-      color: #f1f1f1;
-      -webkit-text-stroke: 1px #191616;
-    }
-  }
 }
 
 .main{
   margin: 1rem 0;
   display: flex;
-  .poster{
+  .singlePoster{
     @include size(40rem,30rem);
   }
   .text{
@@ -50,8 +39,10 @@ body{
 .footer{
   @include d-center;
   margin: 1rem 0;
+
 .content{
   @include size(70vh,80vw);
+  display: flex;
   overflow: scroll;
   overflow-y: hidden;
   &::-webkit-scrollbar{
@@ -61,11 +52,12 @@ body{
   &::-webkit-scrollbar-thumb{
     background: black;
   }
-  display: flex;
-  img{
+  .poster{
     margin:0 .5rem;
     cursor: pointer;
-
-      @include size(100%,30rem);
-
-  }}}
+    @include size(100%,20rem);
+  }
+  .collapse{
+    display: none;
+  }
+}}
