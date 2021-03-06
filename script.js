@@ -9,6 +9,8 @@ const MOVIES_API = 'https://api.themoviedb.org/3/movie/popular?api_key=3ab8ef4da
 const moviesImg = 'https://image.tmdb.org/t/p/w500/'
 const mainContent = document.getElementById('main')
 const poster=document.getElementsByClassName('poster')
+const btnRight=document.getElementById('rightBtn')
+const btnLeft=document.getElementById('leftBtn')
 
 
 async function showMoviesList(){
@@ -34,11 +36,13 @@ async function showMoviesList(){
  }
  showMoviesList()
 
+btnRight.addEventListener('click',()=>{
+    content.scrollLeft+=475
+})
 
-
-
-
-
+btnLeft.addEventListener('click',()=>{
+    content.scrollLeft-=475
+})
 
 
 function showSingleMovies(url1) {
@@ -47,7 +51,7 @@ function showSingleMovies(url1) {
     for(let item of url1){
         let itemImg=item.children[0]
         let itemText=item.children[1]
-        console.log(itemText.children);
+        // console.log(itemText.children);
         item.addEventListener('click', () => {
             previewMovie = `<img class="singlePoster" src=${itemImg.src}>
                                <div>

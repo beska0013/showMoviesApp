@@ -40,7 +40,6 @@ body{
 .footer{
   @include d-center;
   margin: 1rem 0;
-
 .content{
   gap: 1rem;
   box-shadow:  29px 29px 58px #000000,
@@ -49,6 +48,7 @@ body{
   display: flex;
   overflow: scroll;
   overflow-y: hidden;
+  scroll-behavior: smooth;
   &::-webkit-scrollbar{
     height: 5px;
     background: linear-gradient(0deg, #08081b 1%, #070918 44%, #030510 100%);
@@ -58,7 +58,7 @@ body{
   }
   .card{
     box-shadow:  29px 29px 58px #000000,
-    -29px -29px 58px #000000;
+                -29px -29px 58px #000000;
   .poster{
     cursor: pointer;
     @include size(100%,28rem);
@@ -67,3 +67,50 @@ body{
     display: none;
   }
 }}}
+
+.control{
+  gap: 2rem;
+   @include d-center;
+
+  .btn-right,.btn-left{
+    @include d-center;
+    @include size(50px,50px);
+    border: 1px solid #f1f1f1;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: border .3s ease-in-out;
+    box-shadow:  29px 29px 58px #000000,
+                -29px -29px 58px #000000;
+  }
+  .btn-right::after,.btn-left::after{
+    content: '';
+    @include size(0,0);
+    border-style: solid;
+    transition: border .3s ease-in-out;
+  }
+  .btn-left::after{
+    transform: translate(-23%, 0%);
+    border-width: 10px 15px 10px 0;
+    border-color: transparent #aaa0a0 transparent transparent;
+
+  }
+  .btn-right::after{
+    transform: translate(11%, 0%);
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent #aaa0a0;
+  }
+}
+.btn-right:hover,.btn-left:hover{
+  transition: border .3s ease-in-out;
+  border: 1px solid #ca6262;
+}
+.btn-right:active::after{
+  border-color: transparent transparent transparent #fcfcfc ;
+  transition: border .1s ease-in-out;
+}
+.btn-left:active::after{
+  border-color: transparent #fcfcfc  transparent transparent ;
+  transition: border .1s ease-in-out;
+}
+
+

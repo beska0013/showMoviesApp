@@ -68,6 +68,7 @@ body {
   display: flex;
   overflow: scroll;
   overflow-y: hidden;
+  scroll-behavior: smooth;
 }
 .footer .content::-webkit-scrollbar {
   height: 5px;
@@ -86,6 +87,57 @@ body {
 }
 .footer .content .card .collapse {
   display: none;
+}
+
+.control {
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.control .btn-right, .control .btn-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border: 1px solid #f1f1f1;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border 0.3s ease-in-out;
+  box-shadow: 29px 29px 58px #000000, -29px -29px 58px #000000;
+}
+.control .btn-right::after, .control .btn-left::after {
+  content: "";
+  height: 0;
+  width: 0;
+  border-style: solid;
+  transition: border 0.3s ease-in-out;
+}
+.control .btn-left::after {
+  transform: translate(-23%, 0%);
+  border-width: 10px 15px 10px 0;
+  border-color: transparent #aaa0a0 transparent transparent;
+}
+.control .btn-right::after {
+  transform: translate(11%, 0%);
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent #aaa0a0;
+}
+
+.btn-right:hover, .btn-left:hover {
+  transition: border 0.3s ease-in-out;
+  border: 1px solid #ca6262;
+}
+
+.btn-right:active::after {
+  border-color: transparent transparent transparent #fcfcfc;
+  transition: border 0.1s ease-in-out;
+}
+
+.btn-left:active::after {
+  border-color: transparent #fcfcfc transparent transparent;
+  transition: border 0.1s ease-in-out;
 }
 
 /*# sourceMappingURL=main.css.map */
