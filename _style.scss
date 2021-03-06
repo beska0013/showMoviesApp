@@ -3,7 +3,8 @@
 
 body{
   @include size(100vh,100%);
-  background-color: black;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, #08081b 1%, #436995 44%, #1d2955 100%);
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: brightness(30%);
@@ -41,23 +42,28 @@ body{
   margin: 1rem 0;
 
 .content{
+  gap: 1rem;
+  box-shadow:  29px 29px 58px #000000,
+  -29px -29px 58px #000000;
   @include size(70vh,80vw);
   display: flex;
   overflow: scroll;
   overflow-y: hidden;
   &::-webkit-scrollbar{
     height: 5px;
-   background: linear-gradient(to right,#008aff,#00ffe7);
+    background: linear-gradient(0deg, #08081b 1%, #070918 44%, #030510 100%);
   }
   &::-webkit-scrollbar-thumb{
-    background: black;
+    background: #275269;
   }
+  .card{
+    box-shadow:  29px 29px 58px #000000,
+    -29px -29px 58px #000000;
   .poster{
-    margin:0 .5rem;
     cursor: pointer;
-    @include size(100%,20rem);
+    @include size(100%,28rem);
   }
   .collapse{
     display: none;
   }
-}}
+}}}

@@ -15,7 +15,8 @@
 body {
   height: 100vh;
   width: 100%;
-  background-color: black;
+  background: black;
+  background: linear-gradient(0deg, #08081b 1%, #436995 44%, #1d2955 100%);
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: brightness(30%);
@@ -60,6 +61,8 @@ body {
   margin: 1rem 0;
 }
 .footer .content {
+  gap: 1rem;
+  box-shadow: 29px 29px 58px #000000, -29px -29px 58px #000000;
   height: 70vh;
   width: 80vw;
   display: flex;
@@ -68,18 +71,20 @@ body {
 }
 .footer .content::-webkit-scrollbar {
   height: 5px;
-  background: linear-gradient(to right, #008aff, #00ffe7);
+  background: linear-gradient(0deg, #08081b 1%, #070918 44%, #030510 100%);
 }
 .footer .content::-webkit-scrollbar-thumb {
-  background: black;
+  background: #275269;
 }
-.footer .content .poster {
-  margin: 0 0.5rem;
+.footer .content .card {
+  box-shadow: 29px 29px 58px #000000, -29px -29px 58px #000000;
+}
+.footer .content .card .poster {
   cursor: pointer;
   height: 100%;
-  width: 20rem;
+  width: 28rem;
 }
-.footer .content .collapse {
+.footer .content .card .collapse {
   display: none;
 }
 

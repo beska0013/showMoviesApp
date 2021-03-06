@@ -27,12 +27,18 @@ async function showMoviesList(){
                     </div>
                 `
          content.innerHTML=html
-
      }
      const moviePosters=content.children
      showSingleMovies(moviePosters)
      console.log(moviePosters);
- }showMoviesList()
+ }
+ showMoviesList()
+
+
+
+
+
+
 
 
 function showSingleMovies(url1) {
@@ -50,9 +56,6 @@ function showSingleMovies(url1) {
                               <video src=${itemText.children[3].innerHTML} controls></video>
                                 </div>
                                 `
-
-
-
             body.style.backgroundImage=`url(${itemText.children[0].src})`
             mainContent.innerHTML = previewMovie
             content.style.height='22vh'
@@ -60,8 +63,6 @@ function showSingleMovies(url1) {
 
             // body.style.backgroundImage=`url(${url2.backdrop_path})`
         })}
-
-
 }
 
 // form.addEventListener('input', (e) => {
