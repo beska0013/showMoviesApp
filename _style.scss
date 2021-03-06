@@ -16,6 +16,40 @@ body{
 .head{
   @include d-center;
   padding: 1rem;
+  input{
+    @include size(1.8rem,15rem);
+    background: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent transparent #ffffff transparent ;
+    color: #f1f1f1;
+    font:400 16px "Poppins",sans-serif;
+    transition: width .3s ease-in-out;
+    &:focus{
+      @include size(1.8rem,20rem);
+      outline: none;
+      border-color: #650101;
+      border-radius: 10px;
+      transition: width .3s ease-in-out,border .3s ease-in-out;
+    }
+  }
+  input[type='search'i]{
+    appearance: none;
+    padding: 0 1rem;
+  }
+  button{
+    background-color: transparent;
+    &:focus{
+      outline: none;
+    }
+    border: none;
+    .fa-search{
+      color: #aaa0a0;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+  }
 }
 
 .main{
@@ -102,7 +136,7 @@ body{
 }
 .btn-right:hover,.btn-left:hover{
   transition: border .3s ease-in-out;
-  border: 1px solid #ca6262;
+  border: 1px solid #650101;
 }
 .btn-right:active::after{
   border-color: transparent transparent transparent #fcfcfc ;
