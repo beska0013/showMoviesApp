@@ -13,12 +13,14 @@
   }
 }
 body {
+  overflow: hidden;
   height: 100vh;
   width: 100%;
   background: black;
   background: linear-gradient(0deg, #08081b 1%, #436995 44%, #1d2955 100%);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  background-position: center;
   backdrop-filter: brightness(30%);
   padding: 1rem 1rem;
   transition: background 0.3s ease-in-out;
@@ -55,36 +57,51 @@ body {
   padding: 0 1rem;
 }
 .head button {
+  height: 1.8rem;
   background-color: transparent;
+  cursor: pointer;
+  align-items: flex-end;
   border: none;
+}
+.head button:active .bx-search {
+  color: #fcfcfc;
+  transition: color 0.3s ease-in-out;
 }
 .head button:focus {
   outline: none;
 }
-.head button .fa-search {
+.head button .bx-search {
+  transition: color 0.3s ease-in-out;
+  font-size: 20px;
   color: #aaa0a0;
-  font-size: 22px;
-  font-weight: 600;
 }
 
 .main {
-  margin: 1rem 0;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.main .singlePoster {
-  height: 40rem;
-  width: 30rem;
+.main .main-content {
+  display: none;
+  height: max-content;
+  width: 80vw;
 }
-.main .text {
-  font-family: "Poppins ExtraBold", sans-serif;
+.main .main-content .singlePoster {
+  display: flex;
+  height: 37vh;
+  width: 25vw;
+}
+.main .main-content .text {
+  font-family: "Poppins", sans-serif;
   color: #f1f1f1;
   margin: 0 1rem;
 }
-.main .text h2 {
+.main .main-content .text h2 {
+  text-align: center;
   max-font-size: 48px;
   min-font-size: 32px;
 }
-.main video {
+.main .main-content video {
   height: 25rem;
   width: 44rem;
 }
@@ -97,7 +114,7 @@ body {
 }
 .footer .content {
   gap: 1rem;
-  box-shadow: 29px 29px 58px #000000, -29px -29px 58px #000000;
+  box-shadow: 20px 20px 58px #000000, 1px 11px 12px 1px #000000;
   height: 70vh;
   width: 80vw;
   display: flex;
