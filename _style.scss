@@ -2,12 +2,11 @@
 
 
 body{
-  overflow: hidden;
   @include size(100vh,100%);
   background: rgb(0,0,0);
   background: linear-gradient(0deg, #08081b 1%, #436995 44%, #1d2955 100%);
   background-repeat: no-repeat;
-  background-size:100%;
+  background-size: 100% 100%;
   background-position: center;
   backdrop-filter: brightness(30%);
   padding: 1rem 1rem;
@@ -18,7 +17,7 @@ body{
   @include d-center;
   padding: 1rem;
   input{
-    @include size(1.8rem,15rem);
+    @include size(1.8em,10em);
     background: transparent;
     border-width: 1px;
     border-style: solid;
@@ -56,37 +55,45 @@ body{
   font-size: 20px;
   color: #aaa0a0;
 }}}
+
 .main {
+  @include size(58vh,100%);
   @include d-center;
+  display: none;
   .main-content {
     display: none;
-    @include size(max-content,80vw);
-    .singlePoster {
+    @include size(100%,80vw);
+    font-family: "Poppins", sans-serif;
+    color: #f1f1f1;
+    h2 {
+      text-align: center;
+      max-font-size: 48px;
+      min-font-size: 32px;
+    }
+    .imgVideo{
+      @include size(50vh,80vw);
       display: flex;
-      @include size(37vh, 25vw);
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+    .singlePoster {
+      @include size(100%, 30%);
     }
-
+      video {
+        object-fit: fill;
+        background-color: black;
+        @include size(100%, 100%);
+      }}
     .text {
-      font-family: "Poppins", sans-serif;
-      color: #f1f1f1;
-      margin: 0 1rem;
-
-      h2 {
-        text-align: center;
-        max-font-size: 48px;
-        min-font-size: 32px;
-      }
-    }
-
-    video {
-      @include size(25rem, 44rem)
-    }
-  }
-}
+      font-weight: 600;
+      letter-spacing: .05em;
+      padding: .5em 0 1em 0;
+      text-align: center;
+ }}}
 
 .footer{
   @include d-center;
-  margin: 1rem 0;
+  margin: 1rem 0 ;
 .content{
   gap: 1rem;
   box-shadow: 20px 20px 58px #000000, 1px 11px 12px 1px #000000;

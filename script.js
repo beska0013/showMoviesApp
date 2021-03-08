@@ -5,7 +5,7 @@ const input = document.getElementById('searchMovie')
 const moviesImg = 'https://image.tmdb.org/t/p/w500/'
 const poster=document.getElementsByClassName('poster')
 const mainContent = document.getElementById('mainContent')
-
+const mainPage=document.getElementById('mainPage')
 
 
  async function showMoviesList(){
@@ -23,9 +23,9 @@ function moviesArray(arr){
     let html=''
     for (let item of arr.movies){
         html+=`  <div class="card">
-                 <img class="poster" src='${moviesImg}${item.poster_path}'/>
+                 <img class="poster" src='${moviesImg}${item.poster_path}' alt="mainPoster"/>
                  <div class="collapse">
-                 <img src='${moviesImg}${item.backdrop_path}'>
+                 <img src='${moviesImg}${item.backdrop_path}' alt="secondaryPoster"/>
                  <h2>${item.title}</h2>
                  <p>${item.overview}</p>
                  <p>${item.video}</p>
@@ -48,16 +48,22 @@ function showSingleMovies(url1) {
         let itemText=item.children[1]
         console.log(item);
         item.addEventListener('click', () => {
-            previewMovie = `<img class="singlePoster" src=${itemImg.src} alt="poster"/>
+            previewMovie = ` <h2>${itemText.children[1].innerHTML}</h2>
+                             <div class="imgVideo">
+                            <img class="singlePoster" src=${itemImg.src} alt="poster"/>
+                            <video controls>
+                             <source src=${itemText.children[3].innerHTML} type="video/mp4">
+                             <source src=${itemText.children[3].innerHTML} type="video/webm">
+                            </video>
+                            </div>
                                <div class="text">
-                              <h2>${itemText.children[1].innerHTML}</h2>
                               <p>${itemText.children[2].innerHTML}</p>
                                 </div>
-                                <video src=${itemText.children[3].innerHTML} controls></video>
                                 `
             body.style.backgroundImage=`url(${itemText.children[0].src})`
-            mainContent.style.display='flex'
-            mainContent.style.margin='3rem'
+            mainPage.style.display='flex'
+            mainContent.style.display='block'
+            // mainPage.style.marginBottom='3rem'
             mainContent.innerHTML = previewMovie
             content.style.height='22vh'
             for(item of poster){
@@ -90,7 +96,7 @@ btnLeft.addEventListener('click',()=>{
                      item.style.display = 'block'
                      if(inputValue===''){
                          content.style.alignItems = 'flex-start'
-                         content.style.justifyContent = 'flec-start'
+                         content.style.justifyContent = 'flex-start'
                          content.style.height='70vh'
                          content.style.width='80vw'
                          window.location.reload(true)
