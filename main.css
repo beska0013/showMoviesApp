@@ -206,36 +206,37 @@ body {
   transition: border 0.1s ease-in-out;
 }
 
-@media (max-width: 1158px) {
+@media (min-width: 1158px) {
   .head {
     margin: 6rem 0 0 0;
   }
-  .head input {
+
+  input {
     width: 20em;
   }
 
   .footer {
     margin: 3rem 0;
   }
-  .footer .content {
+
+  .content {
     height: 49vh;
   }
-  .footer .content .card .poster {
+
+  .card .poster {
     width: 19rem;
   }
 }
-@media (max-width: 968px) {
-  .footer {
-    margin: 3rem 0;
-  }
+@media (min-width: 968px) {
   .footer .content {
     height: 42vh;
   }
-  .footer .content .card .poster {
+
+  .card .poster {
     width: 16rem;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .head {
     margin: 10rem 0 0 0;
   }
@@ -243,15 +244,17 @@ body {
   .footer {
     margin: 3rem 0;
   }
-  .footer .content {
+
+  .content {
     width: 83vw;
     height: 42vh;
   }
-  .footer .content .card .poster {
+
+  .card .poster {
     width: 16rem;
   }
 }
-@media (max-width: 658px) {
+@media (min-width: 658px) {
   .head {
     margin: 18rem 0 0 0;
   }
@@ -259,11 +262,13 @@ body {
   .footer {
     margin: 3rem 0;
   }
-  .footer .content {
+
+  .content {
     width: 83vw;
     height: 35vh;
   }
-  .footer .content .card .poster {
+
+  .card .poster {
     width: 16rem;
   }
 }
