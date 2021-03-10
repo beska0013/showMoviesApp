@@ -206,7 +206,7 @@ body {
   transition: border 0.1s ease-in-out;
 }
 
-@media (max-width: 1158px) {
+@media (max-width: 1200px) {
   .head {
     margin: 6rem 0 0 0;
   }
@@ -224,8 +224,17 @@ body {
     width: 19rem;
   }
 }
-@media (max-width: 968px) {
-  .content {
+@media (max-width: 992px) {
+  .footer .content {
+    height: 42vh;
+  }
+}
+@media (max-width: 834px) {
+  .head {
+    margin: 10rem 0 0 0;
+  }
+
+  .footer .content {
     height: 42vh;
   }
 }

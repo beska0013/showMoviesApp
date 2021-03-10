@@ -1,10 +1,10 @@
-//
+
 //@media (max-height:662px ) {
 //  .head {
-//    margin: 1rem 0 0 0;
+//    margin: 1rem 0 0 0 ;
 //  }
 //  .footer {
-//    margin: 1.5rem 0;
+//    margin: 1.5rem 0 !important;
 //    .content {
 //      height: 62vh;
 //      .card .poster {
@@ -12,7 +12,7 @@
 //      }}}}
 
 
-@media  (max-width: 1158px){
+@media(max-width:1200px){
   .head {
     margin: 6rem 0 0 0;
     input {
@@ -26,16 +26,23 @@
         width: 19rem;
       }}}}
 
+@media(max-width:992px){
+  .footer {
+    .content {
+      height: 42vh;
+      }}}
 
-@media(max-width: 968px){
-  .content{
-    height: 42vh;
-  }}
+@media(max-width: 834px){
+  .head{margin: 10rem 0 0 0;}
+  .footer {
+    .content {
+      height: 42vh;
+    }}}
 
 
 
 
-//@media (max-width: 768px) {
+//@media (max-width: 834px) {
 //  .head { margin: 10rem 0 0 0;}
 //  .footer {
 //    margin: 3rem 0;
@@ -44,8 +51,8 @@
 //    height: 42vh;
 //  .card .poster {
 //    width: 16rem;
-//  }
-//}}}
+//  }}}}
+
 //
 //@media (max-width: 658px) {
 //  .head {margin: 18rem 0 0 0;}
