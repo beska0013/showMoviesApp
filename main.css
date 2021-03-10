@@ -206,70 +206,27 @@ body {
   transition: border 0.1s ease-in-out;
 }
 
-@media (min-width: 1158px) {
+@media (max-width: 1158px) {
   .head {
     margin: 6rem 0 0 0;
   }
-
-  input {
+  .head input {
     width: 20em;
   }
 
   .footer {
     margin: 3rem 0;
   }
-
-  .content {
+  .footer .content {
     height: 49vh;
   }
-
-  .card .poster {
+  .footer .content .card .poster {
     width: 19rem;
   }
 }
-@media (min-width: 968px) {
-  .footer .content {
-    height: 42vh;
-  }
-
-  .card .poster {
-    width: 16rem;
-  }
-}
-@media (min-width: 768px) {
-  .head {
-    margin: 10rem 0 0 0;
-  }
-
-  .footer {
-    margin: 3rem 0;
-  }
-
+@media (max-width: 968px) {
   .content {
-    width: 83vw;
     height: 42vh;
-  }
-
-  .card .poster {
-    width: 16rem;
-  }
-}
-@media (min-width: 658px) {
-  .head {
-    margin: 18rem 0 0 0;
-  }
-
-  .footer {
-    margin: 3rem 0;
-  }
-
-  .content {
-    width: 83vw;
-    height: 35vh;
-  }
-
-  .card .poster {
-    width: 16rem;
   }
 }
 
